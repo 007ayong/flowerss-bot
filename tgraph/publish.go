@@ -17,13 +17,13 @@ func PublishHtml(sourceTitle string, title string, rawLink string, htmlContent s
 	//	title,
 	//	sourceTitle,
 	//)
-
-	htmlContent = html.UnescapeString(htmlContent) + fmt.Sprintf(
-		"<hr><p>本文章由 <a href=\"https://github.com/indes/flowerss-bot\">flowerss</a> 抓取自RSS，版权归<a href=\"\">源站点</a>所有。</p><p>查看原文：<a href=\"%s\">%s - %s</p>",
-		rawLink,
-		title,
-		sourceTitle,
-	)
+	htmlContent = html.UnescapeString(htmlContent)
+	// htmlContent = html.UnescapeString(htmlContent) + fmt.Sprintf(
+	// 	"<hr><p>本文章由 <a href=\"https://github.com/indes/flowerss-bot\">flowerss</a> 抓取自RSS，版权归<a href=\"\">源站点</a>所有。</p><p>查看原文：<a href=\"%s\">%s - %s</p>",
+	// 	rawLink,
+	// 	title,
+	// 	sourceTitle,
+	// )
 	rand.Seed(time.Now().Unix()) // initialize global pseudo random generator
 	client := clientPool[rand.Intn(len(clientPool))]
 
