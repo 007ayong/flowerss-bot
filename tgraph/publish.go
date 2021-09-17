@@ -1,7 +1,6 @@
 package tgraph
 
 import (
-	"fmt"
 	"go.uber.org/zap"
 	"html"
 	"math/rand"
